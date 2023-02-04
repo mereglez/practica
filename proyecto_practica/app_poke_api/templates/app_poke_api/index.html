@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.2.3/cerulean/bootstrap.min.css" integrity="sha512-1rXsIsq9uaj3bxRth2+Mw1slRDxuPzGlfJ8PaLmkO3/OtvCL7jVQrdxaC1VvCmCzKRMdKu0pmbCtqQz/3/xORA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+      <div class="container">
+        <a href="../" class="navbar-brand">Práctica <span style="color: rgb(39, 117, 161);"> <strong> -
+              Hermenegildo</strong>
+          </span> </a>
+        <a href="https://pokeapi.co/" target="_blank" class="navbar-tech">PokeAPI - mas información</a>
+      </div>
+    </div>
+  
+    <br /><br /> <br>
+    {% block content %}
+    <div id="jumbotron" class="jumbotron" style="text-align: center; margin-top:50px">
+      <h1 class="display-5">Práctica </h1>
+      <h5>REST API y Contenedores</h5>
+
+      <br> <br>
+  
+      <a title="pokeapi" href="{% url 'pokemon' %}"><img src="{% static 'app_poke_api/images/pokeapi.jpg' %}" class="image" style="width:350px; margin-bottom:-50px; "></a>
+      <br> <br> <br> <br>
+      <h4>Observa un posible uso del consumo de PokeApi, una RESTful <br> API con toda la informacion de los pokemon.</h4>
+      
+      <a title="pokeapi" href="{% url 'players_list' %}"><img src="{% static 'app_poke_api/images/rest.jpeg' %}" class="image" style="width:350px; margin-bottom:-50px; "></a>
+      <br> <br> 
+      <h4>API REST creada <br> Con infromacion de jugadores de futbol.</h4>
+    </div>
+
+    {% endblock %}
+  
+    
+    <br> <br>
+    
+  </body>
+</html>
